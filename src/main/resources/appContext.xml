@@ -11,4 +11,8 @@
           class="com.dudch.PassengerCar">
     </bean>
 
+    <bean id="myTruckClass "
+          class="com.dudch.Truck">
+    </bean>
+
 </beans>

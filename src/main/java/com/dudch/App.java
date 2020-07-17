@@ -11,8 +11,7 @@ public class App {
         Car myTrak = new Trak();
         Car myCar = context.getBean("myPassengerCarClass", Car.class);
 
-        myCar.drive();
-        myTrak.drive();
-        }
+        context.close();
 
+        }
 }
