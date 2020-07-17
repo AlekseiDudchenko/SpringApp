@@ -7,12 +7,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean id="myDriver"
+          class="com.dudch.Driver">
+    </bean>
+
     <bean id="myPassengerCarClass"
           class="com.dudch.PassengerCar">
     </bean>
 
-    <bean id="myTruckClass "
+    <bean id="myTruckClass"
           class="com.dudch.Truck">
+        <constructor-arg ref="myDriver"/>
     </bean>
 
 </beans>
