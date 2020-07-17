@@ -8,8 +8,11 @@ public class App {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
 
-        Car myTrak = new Trak();
-        Car myCar = context.getBean("myPassengerCarClass", Car.class);
+        Car myTruck = new Truck();
+        Car myPassengerCar = context.getBean("myPassengerCarClass", Car.class);
+
+        myPassengerCar.drive();
+        myTruck.drive();
 
         context.close();
 
