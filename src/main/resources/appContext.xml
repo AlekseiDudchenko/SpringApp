@@ -22,8 +22,9 @@
     <bean id="myBus"
           class="com.dudch.Bus">
         <property name="fortuneService" ref="happyFortuneService"/>
+        <property name="brand" value="Mercedes"/>
+        <property name="name" value="M-A534"/>
     </bean>
-
 
     <bean id="myTruckClass"
           class="com.dudch.Truck">
