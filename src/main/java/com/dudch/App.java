@@ -23,6 +23,11 @@ public class App {
         secondTruck.drive();
         myTruck.getDailyFortune();
 
+        System.out.println(System.lineSeparator() + "myBus");
+        Car myBus = context.getBean("myBus", Car.class);
+        myBus.drive();
+        myBus.getDailyFortune();
+
         context.close();
     }
 }

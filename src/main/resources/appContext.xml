@@ -19,6 +19,11 @@
           class="com.dudch.UnhappyFortuneService">
     </bean>
 
+    <bean id="myBus"
+          class="com.dudch.Bus">
+        <property name="fortuneService" ref="happyFortuneService"/>
+    </bean>
+
 
     <bean id="myTruckClass"
           class="com.dudch.Truck">
