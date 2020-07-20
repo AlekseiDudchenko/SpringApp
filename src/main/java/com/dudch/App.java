@@ -28,6 +28,11 @@ public class App {
         myBus.drive();
         myBus.getDailyFortune();
 
+        System.out.println(System.lineSeparator() + "busFromProperties");
+        Car busFromProperties = context.getBean("busFromProperties", Car.class);
+        busFromProperties.drive();
+        busFromProperties.getDailyFortune();
+
         context.close();
     }
 }
