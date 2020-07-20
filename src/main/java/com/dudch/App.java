@@ -8,13 +8,20 @@ public class App {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
 
+        System.out.println(System.lineSeparator() + "myPassengerCar: ");
         Car myPassengerCar = context.getBean("myPassengerCarClass", Car.class);
-        Car myTruck = new Truck(new Driver());
-        Car secondTruck = context.getBean("myTruckClass", Car.class);
-
         myPassengerCar.drive();
+        myPassengerCar.getDailyFortune();
+
+        System.out.println(System.lineSeparator() + "myTruck: ");
+        Car myTruck = new Truck(new Driver(), new HappyFortuneService());
         myTruck.drive();
+        myTruck.getDailyFortune();
+
+        System.out.println(System.lineSeparator() + "secondTruck: ");
+        Car secondTruck = context.getBean("myTruckClass", Car.class);
         secondTruck.drive();
+        myTruck.getDailyFortune();
 
         context.close();
     }

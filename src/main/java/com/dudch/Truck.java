@@ -3,9 +3,11 @@ package com.dudch;
 public class Truck implements Car {
 
     Driver driver;
+    FortuneService fortuneService;
 
-    public Truck(Driver driver) {
+    public Truck(Driver driver, FortuneService fortuneService) {
         this.driver = driver;
+        this.fortuneService = fortuneService;
     }
 
 
@@ -13,5 +15,10 @@ public class Truck implements Car {
     public void drive() {
         driver.greet();
         System.out.println("Truck drives!");
+    }
+
+    @Override
+    public void getDailyFortune() {
+        System.out.println(fortuneService.getFortune());
     }
 }

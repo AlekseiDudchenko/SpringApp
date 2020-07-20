@@ -11,13 +11,24 @@
           class="com.dudch.Driver">
     </bean>
 
-    <bean id="myPassengerCarClass"
-          class="com.dudch.PassengerCar">
+    <bean id="happyFortuneService"
+          class="com.dudch.HappyFortuneService">
     </bean>
+
+    <bean id="unhappyFortuneService"
+          class="com.dudch.UnhappyFortuneService">
+    </bean>
+
 
     <bean id="myTruckClass"
           class="com.dudch.Truck">
         <constructor-arg ref="myDriver"/>
+        <constructor-arg ref="happyFortuneService"/>
+    </bean>
+
+    <bean id="myPassengerCarClass"
+          class="com.dudch.PassengerCar">
+        <constructor-arg ref="unhappyFortuneService"/>
     </bean>
 
 </beans>
