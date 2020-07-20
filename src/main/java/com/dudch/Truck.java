@@ -1,5 +1,7 @@
 package com.dudch;
 
+import com.dudch.fortune.FortuneService;
+
 public class Truck implements Car {
 
     Driver driver;

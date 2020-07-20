@@ -1,5 +1,6 @@
 package com.dudch;
 
+import com.dudch.fortune.HappyFortuneService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {

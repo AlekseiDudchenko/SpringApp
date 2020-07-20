@@ -1,4 +1,6 @@
-package com.dudch;
+package com.dudch.fortune;
+
+import com.dudch.fortune.FortuneService;
 
 public class UnhappyFortuneService implements FortuneService {
 

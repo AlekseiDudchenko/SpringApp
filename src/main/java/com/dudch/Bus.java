@@ -2,6 +2,8 @@ package com.dudch;
 
 
 
+import com.dudch.fortune.FortuneService;
+
 import java.util.logging.Logger;
 
 public class Bus implements Car {

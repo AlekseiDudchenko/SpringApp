@@ -14,11 +14,15 @@
     </bean>
 
     <bean id="happyFortuneService"
-          class="com.dudch.HappyFortuneService">
+          class="com.dudch.fortune.HappyFortuneService">
     </bean>
 
     <bean id="unhappyFortuneService"
-          class="com.dudch.UnhappyFortuneService">
+          class="com.dudch.fortune.UnhappyFortuneService">
+    </bean>
+
+    <bean id="randomFortuneService"
+          class="com.dudch.fortune.RandonFortuneService">
     </bean>
 
     <bean id="myBus"
@@ -41,7 +45,7 @@
 
     <bean id="busFromProperties"
           class="com.dudch.Bus">
-        <property name="fortuneService" ref="happyFortuneService"/>
+        <property name="fortuneService" ref="randomFortuneService"/>
         <property name="name" value="${foo.name}"/>
         <property name="brand" value="${foo.brand}"/>
     </bean>
