@@ -1,4 +1,4 @@
-package com.dudch;
+package com.dudch.xmlcontext;
 
 public interface Car {
 

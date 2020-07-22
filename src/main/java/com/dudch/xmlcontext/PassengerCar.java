@@ -1,22 +1,18 @@
-package com.dudch;
+package com.dudch.xmlcontext;
 
 import com.dudch.fortune.FortuneService;
 
-public class Truck implements Car {
+public class PassengerCar implements Car {
 
-    Driver driver;
     FortuneService fortuneService;
 
-    public Truck(Driver driver, FortuneService fortuneService) {
-        this.driver = driver;
+    PassengerCar(FortuneService fortuneService){
         this.fortuneService = fortuneService;
     }
 
-
     @Override
     public void drive() {
-        driver.greet();
-        System.out.println("Truck drives!");
+        System.out.println("Passenger car drives!");
     }
 
     @Override

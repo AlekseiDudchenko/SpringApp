@@ -10,7 +10,7 @@
     <context:property-placeholder location="app.properties"/>
 
     <bean id="myDriver"
-          class="com.dudch.Driver">
+          class="com.dudch.xmlcontext.Driver">
     </bean>
 
     <bean id="happyFortuneService"
@@ -26,25 +26,25 @@
     </bean>
 
     <bean id="myBus"
-          class="com.dudch.Bus">
+          class="com.dudch.xmlcontext.Bus">
         <property name="fortuneService" ref="happyFortuneService"/>
         <property name="brand" value="Mercedes"/>
         <property name="name" value="M-A534"/>
     </bean>
 
     <bean id="myTruckClass"
-          class="com.dudch.Truck">
+          class="com.dudch.xmlcontext.Truck">
         <constructor-arg ref="myDriver"/>
         <constructor-arg ref="happyFortuneService"/>
     </bean>
 
     <bean id="myPassengerCarClass"
-          class="com.dudch.PassengerCar">
+          class="com.dudch.xmlcontext.PassengerCar">
         <constructor-arg ref="unhappyFortuneService"/>
     </bean>
 
     <bean id="busFromProperties"
-          class="com.dudch.Bus">
+          class="com.dudch.xmlcontext.Bus">
         <property name="fortuneService" ref="randomFortuneService"/>
         <property name="name" value="${foo.name}"/>
         <property name="brand" value="${foo.brand}"/>
