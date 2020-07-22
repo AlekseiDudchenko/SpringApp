@@ -1,6 +1,6 @@
 package com.dudch.xmlcontext;
 
-import com.dudch.fortune.FortuneService;
+import com.dudch.xmlcontext.fortune.FortuneService;
 
 public class Truck implements Car {
 

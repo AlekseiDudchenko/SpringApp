@@ -1,4 +1,4 @@
-package com.dudch.fortune;
+package com.dudch.xmlcontext.fortune;
 
 import java.util.Random;
 

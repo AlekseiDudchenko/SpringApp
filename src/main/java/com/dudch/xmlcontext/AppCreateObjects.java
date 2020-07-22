@@ -1,6 +1,6 @@
 package com.dudch.xmlcontext;
 
-import com.dudch.fortune.HappyFortuneService;
+import com.dudch.xmlcontext.fortune.HappyFortuneService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppCreateObjects {

@@ -14,15 +14,15 @@
     </bean>
 
     <bean id="happyFortuneService"
-          class="com.dudch.fortune.HappyFortuneService">
+          class="com.dudch.xmlcontext.fortune.HappyFortuneService">
     </bean>
 
     <bean id="unhappyFortuneService"
-          class="com.dudch.fortune.UnhappyFortuneService">
+          class="com.dudch.xmlcontext.fortune.UnhappyFortuneService">
     </bean>
 
     <bean id="randomFortuneService"
-          class="com.dudch.fortune.RandonFortuneService">
+          class="com.dudch.xmlcontext.fortune.RandonFortuneService">
     </bean>
 
     <bean id="myBus"
