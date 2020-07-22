@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
-    FortuneService fortuneService;
+    private final FortuneService fortuneService;
 
     @Autowired
     public TennisCoach(FortuneService fortuneService) {
@@ -18,12 +18,14 @@ public class TennisCoach implements Coach {
     @Override
     public String getDailyWorkout() {
         System.out.println("\n" + this);
-        System.out.println("TennisCoach.getDailyWorkout()\n");
+        System.out.println("TennisCoach.getDailyWorkout()");
         return "Practice your backhand volley";
     }
 
     @Override
     public String getDailyFortune() {
+        System.out.println("\n" + this);
+        System.out.println("TennisCoach.getDailyFortune()");
         return fortuneService.getFortune();
     }
 

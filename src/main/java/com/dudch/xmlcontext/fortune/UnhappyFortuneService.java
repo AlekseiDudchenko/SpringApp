@@ -6,4 +6,5 @@ public class UnhappyFortuneService implements FortuneService {
     public String getFortune() {
         return "Today is NOT your day";
     }
+
 }

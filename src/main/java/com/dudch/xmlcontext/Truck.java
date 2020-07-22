@@ -4,14 +4,14 @@ import com.dudch.xmlcontext.fortune.FortuneService;
 
 public class Truck implements Car {
 
-    Driver driver;
-    FortuneService fortuneService;
+    private final Driver driver;
+
+    private final FortuneService fortuneService;
 
     public Truck(Driver driver, FortuneService fortuneService) {
         this.driver = driver;
         this.fortuneService = fortuneService;
     }
-
 
     @Override
     public void drive() {

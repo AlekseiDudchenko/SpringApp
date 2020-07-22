@@ -5,4 +5,5 @@ public interface Car {
     void drive();
 
     void getDailyFortune();
+
 }

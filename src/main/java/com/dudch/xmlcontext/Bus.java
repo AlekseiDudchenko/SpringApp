@@ -44,7 +44,6 @@ public class Bus implements Car {
     }
 
 
-
     @Override
     public void drive() {
         System.out.println("This is a " + this.getBrand() + " bus");
@@ -56,4 +55,5 @@ public class Bus implements Car {
     public void getDailyFortune() {
         System.out.println(fortuneService.getFortune());
     }
+
 }

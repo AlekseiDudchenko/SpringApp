@@ -2,8 +2,8 @@ package com.dudch.beansscope;
 
 public interface Coach {
 
-	public String getDailyWorkout();
+	String getDailyWorkout();
 	
-	public String getDailyFortune();
+	String getDailyFortune();
 
 }

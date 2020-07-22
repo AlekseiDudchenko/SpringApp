@@ -11,7 +11,6 @@ public class BeanLifeCycleDemoApp {
                 new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
 
         Coach theCoach = context.getBean("myCoachLC", Coach.class);
-
         Coach thePrototypeCoach = context.getBean("myCoachPrototypeLC", Coach.class);
 
         context.close();

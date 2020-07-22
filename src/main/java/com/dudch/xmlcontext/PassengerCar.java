@@ -4,7 +4,7 @@ import com.dudch.xmlcontext.fortune.FortuneService;
 
 public class PassengerCar implements Car {
 
-    FortuneService fortuneService;
+    private final FortuneService fortuneService;
 
     PassengerCar(FortuneService fortuneService){
         this.fortuneService = fortuneService;
