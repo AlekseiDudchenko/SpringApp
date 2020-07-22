@@ -3,7 +3,7 @@ package com.dudch.anatation;
 import com.dudch.beansscope.Coach;
 import org.springframework.stereotype.Component;
 
-@Component("myTennisCoach")
+@Component
 public class TennisCoach implements Coach {
 
 	
