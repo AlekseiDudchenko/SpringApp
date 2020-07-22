@@ -11,10 +11,18 @@
           class="com.dudch.beansscope.HappyFortuneService">
     </bean>
 
-    <bean id="myCoach"
+    <bean id="myCoachLC"
           class="com.dudch.lifecycle.TrackCoach"
-          init-method="doMyStartupStuff"
-          destroy-method="doMyCleanupStuffYoYo">
+          init-method="startUpSingleton"
+          destroy-method="cleanUpSingleton">
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    <bean id="myCoachPrototypeLC"
+          class="com.dudch.lifecycle.TrackCoach"
+          init-method="startUpPrototype"
+          destroy-method="cleanUpPrototype"
+          scope="prototype">
         <constructor-arg ref="myFortuneService"/>
     </bean>
 

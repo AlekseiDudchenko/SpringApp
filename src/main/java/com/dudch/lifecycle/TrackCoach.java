@@ -22,17 +22,27 @@ public class TrackCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return "Just Do It: " + fortuneService.getFortune();
+        return "TrackCoach.getDailyFortune(): " + fortuneService.getFortune();
     }
 
-    // add an init method
-    public void doMyStartupStuff() {
-        System.out.println("TrackCoach: inside method doMyStartupStuff");
+    public void startUpSingleton() {
+        System.out.println("\n" + this);
+        System.out.println("TrackCoach.startUpSingleton()\n");
     }
 
-    // add a destroy method
-    public void doMyCleanupStuffYoYo() {
-        System.out.println("TrackCoach: inside method doMyCleanupStuffYoYo");
+    public void cleanUpSingleton() {
+        System.out.println("\n" + this);
+        System.out.println("TrackCoach:cleanUpSingleton()\n");
+    }
+
+    public void startUpPrototype() {
+        System.out.println("\n" + this);
+        System.out.println("TrackCoach.startUpPrototype()\n");
+    }
+
+    public void cleanUpPrototype() { //never called
+        System.out.println("\n" + this);
+        System.out.println("\nTrackCoach:cleanUpPrototype()\n");
     }
 }
 

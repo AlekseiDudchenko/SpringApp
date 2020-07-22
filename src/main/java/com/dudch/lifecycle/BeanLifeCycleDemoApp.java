@@ -10,9 +10,9 @@ public class BeanLifeCycleDemoApp {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
 
-        Coach theCoach = context.getBean("myCoach", Coach.class);
+        Coach theCoach = context.getBean("myCoachLC", Coach.class);
 
-        System.out.println(theCoach.getDailyWorkout());
+        Coach thePrototypeCoach = context.getBean("myCoachPrototypeLC", Coach.class);
 
         context.close();
     }
