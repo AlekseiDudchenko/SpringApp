@@ -2,8 +2,9 @@ package com.dudch.lifecycle;
 
 import com.dudch.beansscope.Coach;
 import com.dudch.beansscope.FortuneService;
+import org.springframework.beans.factory.DisposableBean;
 
-public class TrackCoach implements Coach {
+public class TrackCoach implements Coach, DisposableBean {
 
     private FortuneService fortuneService;
 
@@ -42,7 +43,13 @@ public class TrackCoach implements Coach {
 
     public void cleanUpPrototype() { //never called
         System.out.println("\n" + this);
-        System.out.println("\nTrackCoach:cleanUpPrototype()\n");
+        System.out.println("TrackCoach:cleanUpPrototype()\n");
+    }
+
+    @Override
+    public void destroy() throws Exception {  //called for singleton also without mentioning in context.xml
+        System.out.println("\n" + this);
+        System.out.println("TrackCoach:destroy()\n");
     }
 }
 
