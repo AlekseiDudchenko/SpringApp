@@ -19,6 +19,7 @@ public class RandonFortuneService implements FortuneService {
 
     @Override
     public String getFortune() {
+        System.out.println("RandonFortuneService.getFortune()");
         return availableFortunes[random.nextInt(availableFortunes.length)];
     }
 }
