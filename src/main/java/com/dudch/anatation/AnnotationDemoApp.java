@@ -17,6 +17,10 @@ public class AnnotationDemoApp {
 		Coach setterCoach = context.getBean("setterCoach", Coach.class);
 		System.out.println(setterCoach.getDailyWorkout());
 		System.out.println("Fortune: " + setterCoach.getDailyFortune() + System.lineSeparator());
+
+		Coach fieldInjectionCoach = context.getBean("fieldInjectionCoach", Coach.class);
+		System.out.println(fieldInjectionCoach.getDailyWorkout());
+		System.out.println("Fortune: " + fieldInjectionCoach.getDailyFortune() + System.lineSeparator());
 				
 		context.close();
 	}
