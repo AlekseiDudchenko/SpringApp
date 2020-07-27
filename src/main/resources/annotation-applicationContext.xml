@@ -9,7 +9,7 @@
 
 	<!-- add entry to enable component scanning -->
 
-	<context:component-scan base-package="com.dudch.annotations" />
+	<context:component-scan base-package="com.dudch.beans.annotations" />
 
 </beans>
 

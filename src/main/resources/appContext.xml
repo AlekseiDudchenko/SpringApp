@@ -10,41 +10,41 @@
     <context:property-placeholder location="app.properties"/>
 
     <bean id="myDriver"
-          class="com.dudch.xmlcontext.Driver">
+          class="com.dudch.beans.xmlcontext.Driver">
     </bean>
 
     <bean id="happyFortuneService"
-          class="com.dudch.xmlcontext.fortune.HappyFortuneService">
+          class="com.dudch.beans.xmlcontext.fortune.HappyFortuneService">
     </bean>
 
     <bean id="unhappyFortuneService"
-          class="com.dudch.xmlcontext.fortune.UnhappyFortuneService">
+          class="com.dudch.beans.xmlcontext.fortune.UnhappyFortuneService">
     </bean>
 
     <bean id="randomFortuneService"
-          class="com.dudch.xmlcontext.fortune.RandonFortuneService">
+          class="com.dudch.beans.xmlcontext.fortune.RandonFortuneService">
     </bean>
 
     <bean id="myBus"
-          class="com.dudch.xmlcontext.Bus">
+          class="com.dudch.beans.xmlcontext.Bus">
         <property name="fortuneService" ref="happyFortuneService"/>
         <property name="brand" value="Mercedes"/>
         <property name="name" value="M-A534"/>
     </bean>
 
     <bean id="myTruckClass"
-          class="com.dudch.xmlcontext.Truck">
+          class="com.dudch.beans.xmlcontext.Truck">
         <constructor-arg ref="myDriver"/>
         <constructor-arg ref="happyFortuneService"/>
     </bean>
 
     <bean id="myPassengerCarClass"
-          class="com.dudch.xmlcontext.PassengerCar">
+          class="com.dudch.beans.xmlcontext.PassengerCar">
         <constructor-arg ref="unhappyFortuneService"/>
     </bean>
 
     <bean id="busFromProperties"
-          class="com.dudch.xmlcontext.Bus">
+          class="com.dudch.beans.xmlcontext.Bus">
         <property name="fortuneService" ref="randomFortuneService"/>
         <property name="name" value="${foo.name}"/>
         <property name="brand" value="${foo.brand}"/>

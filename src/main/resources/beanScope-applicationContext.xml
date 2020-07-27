@@ -8,17 +8,17 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
     <bean id="myFortuneService"
-    		class="com.dudch.beansscope.HappyFortuneService">
+    		class="com.dudch.beans.beansscope.HappyFortuneService">
     	</bean>
     
  	<bean id="myCoachSingleton"
- 		class="com.dudch.beansscope.TrackCoach"
+ 		class="com.dudch.beans.beansscope.TrackCoach"
  		scope="singleton">
  		<constructor-arg ref="myFortuneService" />
  	</bean>
 
 	<bean id="myCoachPrototype"
-		  class="com.dudch.beansscope.TrackCoach"
+		  class="com.dudch.beans.beansscope.TrackCoach"
 		  scope="prototype">
 		<constructor-arg ref="myFortuneService" />
 	</bean>
