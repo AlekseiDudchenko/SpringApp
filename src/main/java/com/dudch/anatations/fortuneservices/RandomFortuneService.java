@@ -1,4 +1,4 @@
-package com.dudch.anatations;
+package com.dudch.anatations.fortuneservices;
 
 
 import com.dudch.beansscope.FortuneService;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.Random;
 
 @Component
-public class RandonFortuneService implements FortuneService {
+public class RandomFortuneService implements FortuneService {
 
     private final String[] availableFortunes = {
             "luck",
@@ -19,7 +19,7 @@ public class RandonFortuneService implements FortuneService {
 
     @Override
     public String getFortune() {
-        System.out.println("RandonFortuneService.getFortune()");
+        System.out.println("RandomFortuneService.getFortune()");
         return availableFortunes[random.nextInt(availableFortunes.length)];
     }
 }

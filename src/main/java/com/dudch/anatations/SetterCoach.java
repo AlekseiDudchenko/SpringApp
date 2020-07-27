@@ -3,6 +3,7 @@ package com.dudch.anatations;
 import com.dudch.beansscope.Coach;
 import com.dudch.beansscope.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,7 @@ public class SetterCoach implements Coach {
     }
 
     @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
+    public void setFortuneService(@Qualifier("randomFortuneService")FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
