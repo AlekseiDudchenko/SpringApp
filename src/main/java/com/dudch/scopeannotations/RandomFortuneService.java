@@ -1,7 +1,6 @@
-package com.dudch.anatations.fortuneservices;
+package com.dudch.scopeannotations;
 
 
-import com.dudch.beansscope.FortuneService;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;

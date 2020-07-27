@@ -1,4 +1,4 @@
-package com.dudch.anatations.fortuneservices;
+package com.dudch.annotations.fortuneservices;
 
 import com.dudch.beansscope.FortuneService;
 import org.springframework.stereotype.Component;

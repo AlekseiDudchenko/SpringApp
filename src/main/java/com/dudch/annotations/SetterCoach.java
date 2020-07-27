@@ -1,32 +1,35 @@
-package com.dudch.scopeanatations;
+package com.dudch.annotations;
 
+import com.dudch.beansscope.Coach;
+import com.dudch.beansscope.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
-public class PrototypeTennisCoach implements Coach {
+public class SetterCoach implements Coach {
 
-    private final FortuneService fortuneService;
+    private FortuneService fortuneService;
+
+    public SetterCoach() {
+    }
 
     @Autowired
-    public PrototypeTennisCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
+    public void setFortuneService(@Qualifier("randomFortuneService")FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
         System.out.println("\n" + this);
-        System.out.println("TennisCoach.getDailyWorkout()");
+        System.out.println("SetterCoach.getDailyWorkout()");
         return "Practice your backhand volley";
     }
 
     @Override
     public String getDailyFortune() {
         System.out.println("\n" + this);
-        System.out.println("TennisCoach.getDailyFortune()");
+        System.out.println("SetterCoach.getDailyFortune()");
         return fortuneService.getFortune();
     }
 

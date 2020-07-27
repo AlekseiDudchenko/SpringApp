@@ -1,4 +1,4 @@
-package com.dudch.anatations;
+package com.dudch.annotations;
 
 import com.dudch.beansscope.Coach;
 import com.dudch.beansscope.FortuneService;
@@ -7,29 +7,26 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SetterCoach implements Coach {
+public class TennisCoach implements Coach {
 
-    private FortuneService fortuneService;
-
-    public SetterCoach() {
-    }
+    private final FortuneService fortuneService;
 
     @Autowired
-    public void setFortuneService(@Qualifier("randomFortuneService")FortuneService fortuneService) {
+    public TennisCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
         System.out.println("\n" + this);
-        System.out.println("SetterCoach.getDailyWorkout()");
+        System.out.println("TennisCoach.getDailyWorkout()");
         return "Practice your backhand volley";
     }
 
     @Override
     public String getDailyFortune() {
         System.out.println("\n" + this);
-        System.out.println("SetterCoach.getDailyFortune()");
+        System.out.println("TennisCoach.getDailyFortune()");
         return fortuneService.getFortune();
     }
 
