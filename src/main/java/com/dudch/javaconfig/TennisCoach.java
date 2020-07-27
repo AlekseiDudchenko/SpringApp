@@ -1,4 +1,4 @@
-package com.dudch.scopeanatations;
+package com.dudch.javaconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

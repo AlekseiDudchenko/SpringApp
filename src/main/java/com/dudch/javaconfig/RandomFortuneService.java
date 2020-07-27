@@ -1,4 +1,4 @@
-package com.dudch.scopeanatations;
+package com.dudch.javaconfig;
 
 
 import org.springframework.stereotype.Component;
