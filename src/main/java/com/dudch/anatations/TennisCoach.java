@@ -1,4 +1,4 @@
-package com.dudch.anatation;
+package com.dudch.anatations;
 
 import com.dudch.beansscope.Coach;
 import com.dudch.beansscope.FortuneService;
