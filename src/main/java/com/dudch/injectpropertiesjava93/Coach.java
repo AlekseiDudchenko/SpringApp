@@ -1,4 +1,4 @@
-package com.dudch.javabeans;
+package com.dudch.injectpropertiesjava93;
 
 public interface Coach {
 

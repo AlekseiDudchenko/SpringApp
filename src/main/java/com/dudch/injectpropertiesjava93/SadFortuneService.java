@@ -1,9 +1,5 @@
-package com.dudch.javabeans;
+package com.dudch.injectpropertiesjava93;
 
-
-import org.springframework.stereotype.Component;
-
-@Component
 public class SadFortuneService implements FortuneService {
 
     @Override

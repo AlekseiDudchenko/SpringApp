@@ -1,4 +1,4 @@
-package com.dudch.javabeans;
+package com.dudch.injectpropertiesjava93;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -8,9 +8,10 @@ public class JavaConfigDemoApp {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 
-        Coach swimCoach = context.getBean("swimCoach", Coach.class);
-        System.out.println(swimCoach.getDailyWorkout());
-        System.out.println("Fortune: " + swimCoach.getDailyFortune() + System.lineSeparator());
+        SwimCoach swimCoach = context.getBean("swimCoach", SwimCoach.class);
+        System.out.println(System.lineSeparator() + swimCoach);
+        System.out.println(swimCoach.getEmail());
+        System.out.println(swimCoach.getTeam());
 
     }
 }

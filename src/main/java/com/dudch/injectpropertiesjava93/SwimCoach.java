@@ -1,8 +1,16 @@
-package com.dudch.javabeans;
+package com.dudch.injectpropertiesjava93;
+
+import org.springframework.beans.factory.annotation.Value;
 
 public class SwimCoach implements Coach {
 
     private final FortuneService fortuneService;
+
+    @Value("${foo.email}")
+    private String email;
+
+    @Value("${foo.team}")
+    private String team;
 
     public SwimCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
@@ -20,6 +28,14 @@ public class SwimCoach implements Coach {
         System.out.println("\n" + this);
         System.out.println("SwimCoach.getDailyFortune()");
         return fortuneService.getFortune();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTeam() {
+        return team;
     }
 
 }
